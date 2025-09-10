@@ -30,6 +30,14 @@ pip install -r requirements.txt   # (contains streamlit + matplotlib)
 streamlit run ui/app.py
 ```
 
+### Sweep mode
+From the UI (Streamlit), scroll to **Sweep mode**:
+- Pick a parameter (e.g., `reservoir.spectral_radius` or `rhythms.theta_gate_frac`).
+- Set min/max/#points.
+- Click **Run sweep**.
+
+The UI runs N experiments, shows a table of mean error + half-life, plots **half-life vs parameter**, and saves results to `runs/sweep_<param>.csv`.
+
 
 Ablations:
 ```bash
