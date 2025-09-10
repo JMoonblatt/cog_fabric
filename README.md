@@ -6,7 +6,7 @@ Cog Fabric is an experimental framework for studying adaptive and emergent intel
 
 Naviagte to your terminal and input:
 ```bash
-gh repo clone JMoonblatt/cog_fabric
+git clone https://github.com/JMoonblatt/cog_fabric.git
 ```
 and make sure you are inside the directory named cog_fabric before you install or run anything.
 
