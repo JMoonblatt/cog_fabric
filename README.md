@@ -13,6 +13,7 @@ and make sure you are inside the directory named cog_fabric before you install o
 ### Prerequisites
 
 Before you begin, make sure you have the following installed on your system:
+### Make sure when istalling python that you ADD to PATH
 
 - **Python 3.10 or higher** → [Download Python](https://www.python.org/downloads/)  
 - **pip** (Python package manager, usually included with Python)  
