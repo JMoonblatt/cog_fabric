@@ -8,7 +8,7 @@ Naviagte to your terminal (Git Bash preferred) and input
 ```bash
 gh repo clone JMoonblatt/cog_fabric
 ```
-and make sure you are inside the directory named cog_fabric.
+and make sure you are inside the directory named cog_fabric before you install or run anything.
 
 **Install requirements**
 ```bash
