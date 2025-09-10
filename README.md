@@ -2,14 +2,6 @@
 
 Cog Fabric is an experimental framework for studying adaptive and emergent intelligence. It combines an event-based environment with modules for rhythms, plasticity, memory, and routing. The goal is to explore how systems respond to shocks and adapt over time.
 
-### Getting Started
-
-Naviagte to your terminal and input:
-```bash
-git clone https://github.com/JMoonblatt/cog_fabric.git
-```
-and make sure you are inside the directory named cog_fabric before you install or run anything.
-
 ### Prerequisites
 
 Before you begin, make sure you have the following installed on your system:
@@ -25,6 +17,14 @@ python --version
 pip --version
 git --version
 ```
+
+### Getting Started
+
+Naviagte to your terminal and input:
+```bash
+git clone https://github.com/JMoonblatt/cog_fabric.git
+```
+and make sure you are inside the directory named cog_fabric before you install or run anything.
 
 **Install requirements**
 ```bash
