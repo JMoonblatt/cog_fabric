@@ -10,6 +10,21 @@ git clone https://github.com/JMoonblatt/cog_fabric.git
 ```
 and make sure you are inside the directory named cog_fabric before you install or run anything.
 
+### Prerequisites
+
+Before you begin, make sure you have the following installed on your system:
+
+- **Python 3.10 or higher** → [Download Python](https://www.python.org/downloads/)  
+- **pip** (Python package manager, usually included with Python)  
+- **Git** → [Download Git](https://git-scm.com/downloads)
+
+You can check if these are installed by running:
+```bash
+python --version
+pip --version
+git --version
+```
+
 **Install requirements**
 ```bash
 pip install -r requirements.txt
