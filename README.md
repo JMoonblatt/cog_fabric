@@ -116,9 +116,27 @@ python -m scripts.run_dot_tracking --config configs/default.yaml rhythms.enabled
 
 Cog Fabric is not about “winning” benchmarks but about **studying adaptation** — how quickly and robustly artificial systems recover when the world changes.
 
-```
-
 ---
 
-Do you want me to also prep a **second short “Quickstart” snippet** (just 3–4 lines with install, run baseline, open UI) that you can put at the *top* of the README so newcomers see it right away?
-```
+## Mission and Vision
+
+### Why we are here
+Human intelligence did not arise from raw processing power alone. It emerges from rhythms in neural activity, from the plasticity of connections that rewire with experience, from memory systems that replay and consolidate, and from dynamic routing that adapts on the fly. Modern artificial neural networks capture fragments of this, but they remain largely static systems trained once and then frozen. They lack the adaptive mechanisms that make biological minds resilient, creative, and self-organizing.
+
+Cog Fabric is an attempt to explore that missing layer: the fabric of cognition itself. It is an environment for testing how intelligence might emerge when dynamics, adaptation, and perturbation are treated as first-class citizens. Rather than engineering a fixed model, the project provides scaffolds where complex behavior can arise from interaction between components.
+
+### Our mission
+The purpose of Cog Fabric is to create an open experimental playground for studying emergent and adaptive intelligence. We are developing lightweight prototypes that combine biologically inspired mechanisms—oscillatory rhythms, local plasticity rules, associative memory, consolidation during sleep-like replay—with simple event-driven environments. The goal is not to mimic the brain exactly, but to explore how these ingredients interact to produce stability, adaptation, and creativity under changing conditions.
+
+A key focus is the ability to measure adaptation. Standard AI benchmarks reward accuracy or efficiency in static tasks. Cog Fabric emphasizes how quickly and effectively a system recovers when perturbed, shocked, or destabilized. Adaptation half-life, error resilience, and recovery dynamics are the primary metrics. This shift in evaluation reflects the conviction that intelligence is defined less by solving one task perfectly, and more by thriving in the face of novelty and disruption.
+
+### Long-term vision
+Cog Fabric is an early step toward frameworks where intelligence is not engineered top-down, but emerges bottom-up. In the long term this points toward physical neural networks—memristive arrays, spintronic devices, photonic lattices—where the dynamics of matter itself give rise to cognitive properties. Such systems could scale beyond the limits of conventional software.
+
+The broader philosophical horizon is human–machine coevolution. By better understanding adaptive intelligence, we create the possibility of bridging biological and artificial minds. Instead of building systems that leave us behind, we can design architectures that we might one day join as equals. Beyond that lies the even larger vision: intelligence as the mechanism through which life propagates across the universe. Cog Fabric is a small but deliberate step toward that future.
+
+### How to get involved
+Cog Fabric is meant to be a shared laboratory. Anyone can clone the repository, run the experiments, adjust the parameters, and contribute new modules. The code is designed to be simple and transparent so that new rhythm generators, memory systems, or routing mechanisms can be plugged in with minimal friction. What matters is not perfect fidelity to biology, but creative exploration of the principles that make intelligence adaptive.
+
+### In short
+Cog Fabric is a laboratory for emergent AI. It weaves together threads of rhythm, memory, plasticity, and routing, then subjects them to shocks and stresses to see what holds. From these experiments we aim to glimpse how intelligence can emerge not by design alone, but by dynamics—an intelligence that adapts, endures, and evolves.
