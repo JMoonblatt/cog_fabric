@@ -33,6 +33,7 @@ streamlit run ui/app.py
 ```
 
 This opens a dashboard in your browser. You can toggle features, adjust parameters, launch runs, and view results without the command line.
+
 To close the web ui, go back to the terminal and **CTRL + C** to stop it.
 
 ---
