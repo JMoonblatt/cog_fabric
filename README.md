@@ -114,7 +114,7 @@ python -m scripts.run_dot_tracking --config configs/default.yaml rhythms.enabled
 
 ---
 
-Cog Fabric is not about “winning” benchmarks but about **studying adaptation** — how quickly and robustly artificial systems recover when the world changes.
+Cog Fabric is not about “winning” benchmarks but about **studying adaptation**, how quickly and robustly artificial systems recover when the world changes.
 
 ---
 
