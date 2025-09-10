@@ -21,6 +21,16 @@ pip install -r requirements.txt
 python scripts/run_dot_tracking.py --config configs/default.yaml
 ```
 
+## Web UI
+
+A tiny Streamlit UI lets you toggle features, launch runs, and plot results without the terminal.
+
+```bash
+pip install -r requirements.txt   # (contains streamlit + matplotlib)
+streamlit run ui/app.py
+```
+
+
 Ablations:
 ```bash
 # Disable rhythms
