@@ -1,54 +1,124 @@
-# cog_fabric: A tiny lab for emergent, adaptive AI
+## User Guide
 
-This repo is a **minimal, runnable scaffold** for experimenting with:
-- Event-based perception
-- Rhythmic (theta/gamma) gating
-- Local plasticity (Hebbian / STDP-like)
-- A simple reservoir (echo-state network)
-- A toy associative memory (Hopfield placeholder)
-- A dynamic router that routes modules based on prediction error / novelty
-- Sleep/replay consolidation
+Cog Fabric is an experimental framework for studying adaptive and emergent intelligence. It combines an event-based environment with modules for rhythms, plasticity, memory, and routing. The goal is to explore how systems respond to shocks and adapt over time.
 
-No special hardware required: Python 3.10+, NumPy, PyTorch, PyYAML.
+### Getting Started
 
-## Quickstart
+**Install requirements**
+```bash
+pip install -r requirements.txt
+````
+
+**Run a baseline experiment**
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-# Run the dot-tracking demo (prints metrics to stdout)
-python scripts/run_dot_tracking.py --config configs/default.yaml
+python -m scripts.run_dot_tracking --config configs/default.yaml
 ```
 
-## Web UI
+At the end of training you’ll see:
 
-A tiny Streamlit UI lets you toggle features, launch runs, and plot results without the terminal.
+* **Mean error**: how well the system tracked the moving dot overall.
+* **Adaptation half-life**: how many steps it takes to cut error in half after a perturbation.
+
+**Use the web UI (recommended)**
 
 ```bash
-pip install -r requirements.txt   # (contains streamlit + matplotlib)
 streamlit run ui/app.py
 ```
 
-### Sweep mode
-From the UI (Streamlit), scroll to **Sweep mode**:
-- Pick a parameter (e.g., `reservoir.spectral_radius` or `rhythms.theta_gate_frac`).
-- Set min/max/#points.
-- Click **Run sweep**.
+This opens a dashboard in your browser. You can toggle features, adjust parameters, launch runs, and view results without the command line.
 
-The UI runs N experiments, shows a table of mean error + half-life, plots **half-life vs parameter**, and saves results to `runs/sweep_<param>.csv`.
+---
 
+### Features
 
-Ablations:
+**Rhythms**
+Simulates oscillatory gating, similar to brain rhythms. Controls when learning and routing are active.
+
+* `theta_hz`, `gamma_hz`: frequencies of slow and fast oscillations.
+* `theta_gate_frac`, `gamma_gate_frac`: fraction of each cycle where learning/routing is “open.”
+  Effect: tighter gates make learning more selective, reducing noise but slowing adaptation.
+
+**Plasticity**
+Enables local weight updates during runtime. Without it, the system only learns through its fixed readout layer.
+
+* `lr`: learning rate for plasticity.
+* `decay`: how fast plastic changes fade.
+  Effect: improves online learning and recovery after shocks.
+
+**Memory**
+Adds an associative memory module that can store and replay patterns.
+
+* `max_patterns`: number of distinct patterns it can store.
+  Effect: improves stability and recall, especially under repeated perturbations.
+
+**Router**
+Dynamically switches between strategies based on error.
+
+* `error_window`: how many past steps are considered.
+* `error_threshold`: when exceeded, routing shifts to exploration.
+* `novelty_beta`: how strongly it weights novelty vs. stability.
+  Effect: improves flexibility when environments change suddenly.
+
+---
+
+### Training Parameters
+
+* `steps_per_episode`: how many timesteps each run lasts.
+* `episodes`: number of episodes to train.
+* `sleep_replay_epochs`: how many times to replay memory after each episode (simulating sleep).
+* `seed`: random seed for reproducibility.
+
+---
+
+### Perturbations (Shocks)
+
+Perturbations introduce stress tests by altering the dot’s movement mid-episode.
+
+* `enabled`: true or false.
+* `step`: timestep when the shock occurs.
+* `speed_multiplier`: factor by which dot speed increases (e.g., 2.0 doubles the speed).
+* `noise_std`: amount of noise added to event signals.
+* `noise_steps`: how many steps noise persists after the shock.
+
+Effect: forces the system to adapt. Adaptation half-life is measured during recovery.
+
+---
+
+### Web UI
+
+* **Sidebar controls**: toggle features, tune rhythm knobs, set training length, and configure perturbations.
+* **Logs panel**: shows live output during training.
+* **Compare runs**: pick multiple past runs and overlay their loss curves to see differences.
+* **Sweep mode**: pick a parameter, set a range, and automatically run a grid of experiments to plot half-life vs parameter.
+
+---
+
+### Example Workflows
+
+**Baseline vs Ablation**
+Run with all features on, then disable one (e.g. rhythms) and compare recovery.
+
+**Perturbation Test**
+Enable shocks at step 200 with speed multiplier 2.0. Check how quickly the model stabilizes.
+
+**Parameter Sweep**
+Explore how `reservoir.spectral_radius` from 0.6 to 1.2 affects adaptation half-life.
+
+**Custom Config**
+Edit `configs/default.yaml` or pass overrides:
+
 ```bash
-# Disable rhythms
-python scripts/run_dot_tracking.py --config configs/default.yaml rhythms.enabled=false
-
-# Disable plasticity
-python scripts/run_dot_tracking.py --config configs/default.yaml plasticity.enabled=false
-
-# Disable router (static wiring)
-python scripts/run_dot_tracking.py --config configs/default.yaml router.enabled=false
+python -m scripts.run_dot_tracking --config configs/default.yaml rhythms.enabled=false
 ```
 
-Artifacts: logs print to stdout; you can redirect to a file. The demo is intentionally lightweight.
+---
+
+Cog Fabric is not about “winning” benchmarks but about **studying adaptation** — how quickly and robustly artificial systems recover when the world changes.
+
+```
+
+---
+
+Do you want me to also prep a **second short “Quickstart” snippet** (just 3–4 lines with install, run baseline, open UI) that you can put at the *top* of the README so newcomers see it right away?
+```
