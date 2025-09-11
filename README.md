@@ -1,4 +1,4 @@
-## User Guide
+# User Guide
 
 Cog Fabric is an experimental framework for studying adaptive and emergent intelligence. It combines an event-based environment with modules for rhythms, plasticity, memory, and routing. The goal is to explore how systems respond to shocks and adapt over time.
 
@@ -18,7 +18,7 @@ pip --version
 git --version
 ```
 
-### Getting Started
+##Getting Started
 
 It’s strongly recommended to use a **virtual environment (venv)** so Cog Fabric’s dependencies don’t interfere with other Python projects on your system.
 
@@ -28,7 +28,7 @@ It’s strongly recommended to use a **virtual environment (venv)** so Cog Fabri
 python -m venv .venv
 ```
 
-# Activate it:
+### Activate it:
 **On Linux/macOS**
 ```bash
 source .venv/bin/activate
