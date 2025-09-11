@@ -20,6 +20,24 @@ git --version
 
 ### Getting Started
 
+It’s strongly recommended to use a **virtual environment (venv)** so Cog Fabric’s dependencies don’t interfere with other Python projects on your system.
+
+**Create and activate a virtual environment**
+```bash
+# Create venv in the repo root
+python -m venv .venv
+```
+
+# Activate it:
+# On Linux/macOS
+```bash
+source .venv/bin/activate
+```
+# On Windows (PowerShell)
+```bash
+.venv\Scripts\Activate.ps1
+```
+
 Naviagte to your terminal and input:
 ```bash
 git clone https://github.com/JMoonblatt/cog_fabric.git
