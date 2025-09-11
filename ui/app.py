@@ -1,6 +1,8 @@
 # ui/app.py
 import subprocess, sys, os, time, glob, yaml, csv
 from pathlib import Path
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RUNS_DIR = REPO_ROOT / "runs"
 import streamlit as st
 import matplotlib.pyplot as plt
 import math
