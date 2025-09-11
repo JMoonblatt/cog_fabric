@@ -37,6 +37,7 @@ source .venv/bin/activate
 ```bash
 .venv\Scripts\Activate.ps1
 ```
+---
 
 Naviagte to your terminal and input:
 ```bash
