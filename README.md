@@ -18,7 +18,7 @@ pip --version
 git --version
 ```
 
-##Getting Started
+### Getting Started
 
 Naviagte to your terminal and input:
 ```bash
