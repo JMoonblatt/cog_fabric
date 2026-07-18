@@ -142,12 +142,6 @@ Cog Fabric is not about “winning” benchmarks but about **studying adaptation
 
 ---
 
-## Mission and Vision
-
-### Why we are here
-Human intelligence did not arise from raw processing power alone. It emerges from rhythms in neural activity, from the plasticity of connections that rewire with experience, from memory systems that replay and consolidate, and from dynamic routing that adapts on the fly. Modern artificial neural networks capture fragments of this, but they remain largely static systems trained once and then frozen. They lack the adaptive mechanisms that make biological minds resilient, creative, and self-organizing.
-
-Cog Fabric is an attempt to explore that missing layer: the fabric of cognition itself. It is an environment for testing how intelligence might emerge when dynamics, adaptation, and perturbation are treated as first-class citizens. Rather than engineering a fixed model, the project provides scaffolds where complex behavior can arise from interaction between components.
 
 ### Our mission
 The purpose of Cog Fabric is to create an open experimental playground for studying emergent and adaptive intelligence. We are developing lightweight prototypes that combine biologically inspired mechanisms, oscillatory rhythms, local plasticity rules, associative memory, consolidation during sleep-like replay, with simple event-driven environments. The goal is not to mimic the brain exactly, but to explore how these ingredients interact to produce stability, adaptation, and creativity under changing conditions.
